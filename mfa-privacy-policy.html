@@ -1,104 +1,185 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MFA Authenticator 隐私权政策 / Privacy Policy</title>
+  <meta name="description" content="MFA Authenticator Privacy Policy" />
+  <title>MFA Authenticator Privacy Policy</title>
   <style>
-    :root { color-scheme: light dark; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; margin: 0; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
-    h1, h2 { line-height: 1.35; }
-    .muted { opacity: .8; }
-    .block { border: 1px solid #8884; border-radius: 10px; padding: 16px; margin: 16px 0; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { line-height: 1.35; }
+    .muted { color: #6b7280; }
+    ul { padding-left: 20px; }
+    a { color: #2563eb; }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <h1>MFA Authenticator 隐私权政策 / Privacy Policy</h1>
-    <p class="muted">最后更新 / Last updated: 2026-02-19</p>
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 2026-02-26</p>
 
-    <div class="block">
-      <h2>中文</h2>
-      <p>本应用（MFA Authenticator）重视您的隐私。本政策说明我们如何处理信息。</p>
+      <p>
+        MFA Authenticator ("the App") respects your privacy. This Privacy Policy explains what data the App processes,
+        how data is used, and what choices you have.
+      </p>
 
-      <h3>1. 我们收集的信息</h3>
+      <h2>1. Information We Process</h2>
       <ul>
-        <li><strong>相机权限（android.permission.CAMERA）</strong>：仅用于扫描二维码（如 OTP 配置码）。</li>
-        <li><strong>账号与密钥数据</strong>：您添加的 MFA/TOTP 信息仅保存在您的设备本地。</li>
+        <li><strong>Account configuration data</strong>: issuer, account name, secret key, and related MFA/TOTP settings you provide.</li>
+        <li><strong>Camera access</strong>: used only when you choose to scan QR codes for account setup.</li>
+        <li><strong>Security settings</strong>: app lock, biometric preference, screenshot protection preference, language preference, and legal acceptance flag.</li>
+        <li><strong>Cloud backup metadata</strong>: cloud auth tokens and backup metadata required for backup/restore operations you enable.</li>
+        <li><strong>Ad SDK data</strong>: if ads are enabled, Google Mobile Ads may process device and usage data under its own policy.</li>
       </ul>
 
-      <h3>2. 我们如何使用信息</h3>
+      <h2>2. How We Use Information</h2>
       <ul>
-        <li>相机仅在扫码页面启用，用于识别二维码内容。</li>
-        <li>识别出的信息用于在本地生成动态验证码。</li>
+        <li>Generate one-time verification codes locally on your device.</li>
+        <li>Allow account import via QR scan or manual entry.</li>
+        <li>Protect access with PIN and optional biometric unlock.</li>
+        <li>Enable optional cloud backup and restore when you turn it on.</li>
+        <li>Display ads (where enabled) and maintain app stability.</li>
       </ul>
 
-      <h3>3. 数据存储与安全</h3>
+      <h2>3. Storage and Security</h2>
       <ul>
-        <li>数据默认存储于本地设备，不会上传到我们的服务器。</li>
-        <li>应用使用系统安全能力（如安全存储）保护敏感数据。</li>
+        <li>Your MFA account data is stored locally on your device using app storage protections.</li>
+        <li>Cloud backup is optional and only runs after you enable cloud sync.</li>
+        <li>Backup payload and backup key are stored separately in cloud storage paths.</li>
+        <li>Network calls for cloud operations use a timeout strategy to reduce long hangs on unstable networks.</li>
       </ul>
 
-      <h3>4. 数据共享</h3>
-      <p>我们不会将您的 MFA 账号、密钥或二维码内容出售或共享给第三方。</p>
+      <h2>4. Cloud Services</h2>
+      <p>
+        If you enable cloud sync, the App uses your selected cloud provider (currently Firestore path-based storage in this build)
+        to upload/download encrypted backup data and key material needed for restore.
+      </p>
 
-      <h3>5. 您的控制权</h3>
+      <h2>5. Third-Party Services</h2>
       <ul>
-        <li>您可以随时删除应用中的账号数据。</li>
-        <li>卸载应用后，本地应用数据会随系统机制被移除（具体取决于设备系统行为）。</li>
+        <li>Google Sign-In / OAuth for cloud authorization.</li>
+        <li>Google Firestore API for cloud backup storage when enabled.</li>
+        <li>Google Mobile Ads (AdMob) where ad modules are enabled.</li>
       </ul>
 
-      <h3>6. 儿童隐私</h3>
-      <p>本应用不以 13 岁以下儿童为目标人群，也不会主动收集儿童个人信息。</p>
+      <h2>6. Data Sharing</h2>
+      <p>
+        We do not sell your MFA account data. Data is shared only as needed to provide the cloud backup features you explicitly enable,
+        and only with the configured third-party service providers.
+      </p>
 
-      <h3>7. 政策更新</h3>
-      <p>我们可能更新本政策。更新后会在本页面显示最新日期。</p>
+      <h2>7. Your Choices</h2>
+      <ul>
+        <li>Add, edit, remove, or reorder accounts at any time.</li>
+        <li>Enable or disable app lock and screenshot protection.</li>
+        <li>Enable or disable cloud auto sync in Settings.</li>
+      </ul>
 
-      <h3>8. 联系方式</h3>
-      <p>如有问题，请联系：<strong>huanganle5@gmail.com</strong> </p>
+      <h2>8. Contact</h2>
+      <p>For privacy questions, contact: <a href="mailto:huangnle5@gmail.com">huangnle5@gmail.com</a></p>
     </div>
 
-    <div class="block">
-      <h2>English</h2>
-      <p>This app (MFA Authenticator) respects your privacy. This policy explains how information is handled.</p>
+    <div class="card">
+      <h1>隐私政策（简体中文）</h1>
+      <p class="muted">最后更新：2026-02-26</p>
 
-      <h3>1. Information We Process</h3>
+      <p>MFA Authenticator（“本应用”）重视您的隐私。本政策说明本应用处理的数据类型、用途以及您的可选项。</p>
+
+      <h2>1. 我们处理的信息</h2>
       <ul>
-        <li><strong>Camera permission (android.permission.CAMERA)</strong>: used only to scan QR codes (e.g., OTP setup codes).</li>
-        <li><strong>Account and secret data</strong>: MFA/TOTP data you add is stored locally on your device.</li>
+        <li><strong>账号配置数据</strong>：您提供的发行方、账号名、密钥及相关 MFA/TOTP 配置。</li>
+        <li><strong>相机权限</strong>：仅在您选择扫码导入时用于识别二维码。</li>
+        <li><strong>安全设置</strong>：应用锁、生物识别开关、截屏保护、语言偏好、协议同意状态等。</li>
+        <li><strong>云备份元数据</strong>：您启用备份/恢复时所需的云授权令牌与备份元信息。</li>
+        <li><strong>广告 SDK 数据</strong>：若启用广告，Google Mobile Ads 可能依据其政策处理设备与使用数据。</li>
       </ul>
 
-      <h3>2. How We Use Information</h3>
+      <h2>2. 信息用途</h2>
       <ul>
-        <li>The camera is activated only on scanning screens to read QR code content.</li>
-        <li>Scanned data is used locally to generate one-time passcodes.</li>
+        <li>在本地生成一次性验证码。</li>
+        <li>支持扫码导入或手动录入账号。</li>
+        <li>通过 PIN 与可选生物识别保护访问安全。</li>
+        <li>在您开启后提供云端备份与恢复功能。</li>
       </ul>
 
-      <h3>3. Storage and Security</h3>
+      <h2>3. 存储与安全</h2>
       <ul>
-        <li>Data is stored locally on your device and is not uploaded to our servers.</li>
-        <li>The app uses platform security features (such as secure storage) to protect sensitive data.</li>
+        <li>MFA 账号数据默认保存在本地设备。</li>
+        <li>云端备份是可选功能，仅在您开启后执行。</li>
+        <li>备份密文与备份密钥分路径存储。</li>
+        <li>云端网络请求采用超时策略，降低弱网下长时间等待。</li>
       </ul>
 
-      <h3>4. Data Sharing</h3>
-      <p>We do not sell or share your MFA accounts, secrets, or QR content with third parties.</p>
-
-      <h3>5. Your Choices</h3>
+      <h2>4. 第三方服务</h2>
       <ul>
-        <li>You can remove account data in the app at any time.</li>
-        <li>When the app is uninstalled, local app data is removed according to device OS behavior.</li>
+        <li>Google Sign-In / OAuth（云端授权）</li>
+        <li>Google Firestore API（云端备份）</li>
+        <li>Google Mobile Ads（广告）</li>
       </ul>
 
-      <h3>6. Children's Privacy</h3>
-      <p>This app is not directed to children under 13 and does not knowingly collect children's personal information.</p>
+      <h2>5. 联系方式</h2>
+      <p>如有隐私问题，请联系：<a href="mailto:huangnle5@gmail.com">huangnle5@gmail.com</a></p>
+    </div>
 
-      <h3>7. Policy Changes</h3>
-      <p>We may update this policy from time to time. The latest date will be shown on this page.</p>
+    <div class="card">
+      <h1>Política de Privacidad (Español)</h1>
+      <p class="muted">Última actualización: 2026-02-26</p>
 
-      <h3>8. Contact</h3>
-      <p>For questions, contact: <strong>huanganle5@gmail.com</strong> </p>
+      <p>MFA Authenticator ("la Aplicación") respeta su privacidad. Esta política explica qué datos procesa la App, cómo se usan y qué opciones tiene usted.</p>
+
+      <h2>1. Información que procesamos</h2>
+      <ul>
+        <li><strong>Datos de configuración de cuentas</strong>: proveedor, nombre de cuenta, clave secreta y configuración MFA/TOTP.</li>
+        <li><strong>Acceso a cámara</strong>: solo cuando usted decide escanear códigos QR para importar cuentas.</li>
+        <li><strong>Ajustes de seguridad</strong>: bloqueo de app, biometría, protección de capturas, idioma y estado de aceptación legal.</li>
+        <li><strong>Metadatos de copia en la nube</strong>: tokens de autorización y metadatos necesarios para respaldo/restauración.</li>
+        <li><strong>Datos de SDK de anuncios</strong>: si hay anuncios habilitados, Google Mobile Ads puede procesar datos del dispositivo según su propia política.</li>
+      </ul>
+
+      <h2>2. Cómo usamos la información</h2>
+      <ul>
+        <li>Generar códigos de verificación de un solo uso localmente en su dispositivo.</li>
+        <li>Permitir importación por QR o entrada manual.</li>
+        <li>Proteger el acceso con PIN y biometría opcional.</li>
+        <li>Ofrecer copia y restauración en la nube cuando usted lo habilita.</li>
+      </ul>
+
+      <h2>3. Almacenamiento y seguridad</h2>
+      <ul>
+        <li>Los datos MFA se almacenan localmente en su dispositivo.</li>
+        <li>La copia en la nube es opcional y solo funciona cuando está activada.</li>
+        <li>La carga útil y la clave de copia se almacenan por separado en rutas de nube.</li>
+        <li>Las solicitudes de red en nube usan estrategia de tiempo de espera para reducir bloqueos en redes inestables.</li>
+      </ul>
+
+      <h2>4. Servicios de terceros</h2>
+      <ul>
+        <li>Google Sign-In / OAuth para autorización en nube.</li>
+        <li>Google Firestore API para almacenamiento de copias.</li>
+        <li>Google Mobile Ads (AdMob), si está habilitado.</li>
+      </ul>
+
+      <h2>5. Contacto</h2>
+      <p>Para consultas de privacidad: <a href="mailto:huangnle5@gmail.com">huangnle5@gmail.com</a></p>
     </div>
   </main>
 </body>
